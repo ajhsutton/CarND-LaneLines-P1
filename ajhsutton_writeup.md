@@ -30,7 +30,7 @@ The goals / steps of this project are the following:
 ### 1. Pipeline. 
 
 The follow steps were implemented for the pipeline. The pipeline was tuned to detect road markings in a specified Region of Interest using Canny edge detection and line extraction with the Hough Transform. In addition, two forms of averaging were implemented.
- - Import image and convert to Greyscale (cvtColor(img, cv2.COLOR_RGB2GRAY)).
+ - Import image and convert to Greyscale (cvtColor).
  - Smooth Image w a Gaussian filter kernel (GaussianBlur).
  - Canny Edge Detection and Region-of-Interest. The output of this stage is edges detected within the specified Region of Interest on the image. Below shows the detected edges, and the overlay of the edges onto the original image.
   ![alt text][image4]
@@ -53,7 +53,7 @@ The pipeline was modified to allow changing image resolution by a specifying rel
 ### 2. Identify potential shortcomings with your current pipeline
 There is a significant frame-to-frame deviation in the lane line estimate.
 
-The pipeline is limited due to hard coded values for edge thresholding etc. This limits performance when, large changes in contrast occur on the road surface. This ocurrs at two points in the challenge image: then entering the lighter concrete road section (the road surface appears nearly white), and when the shadow of a tree is cast over the road. In this instance, edge detection is foiled by the large number of edges detected by the high-contrast shadow.
+The pipeline is limited due to hard coded values for edge thresholding etc. This limits performance when, large changes in contrast occur on the road surface. This occurs at two points in the challenge image: then entering the lighter concrete road section (the road surface appears nearly white), and when the shadow of a tree is cast over the road. In this instance, edge detection is foiled by the large number of edges detected by the high-contrast shadow.
 
 ![alt text][image6]
 
