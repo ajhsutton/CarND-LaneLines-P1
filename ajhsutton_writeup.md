@@ -16,13 +16,21 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./writeup_images/AverageLineInterpolation.png "Line Interpolation"
+
 [image2]:  ./writeup_images/LeftRightLineClassificaiton.png "Left vs Right Lane"
+
 [image3]:  ./writeup_images/LineSegmentAngleEstimation.png "Line Segment Angles"
+
 [image4]:  ./writeup_images/LineSegments.png "Line Segments"
+
 [image5]:  ./writeup_images/LineSegmentOverlay.png "Line Segment Overlay"
+
 [image6]:  ./writeup_images/NoiseyEdgeMap.png "Edge Map in Shade"
+
 [image7]:  ./writeup_images/Final_image1.png "Test Image 1"
+
 [image8]:  ./writeup_images/Final_image2.png "Test Image 2"
+
 ---
 
 ### Reflection
@@ -40,13 +48,13 @@ The follow steps were implemented for the pipeline. The pipeline was tuned to de
  - Segment Angle filter. In order to separate the left and right lane lines, the line segments was filtered by their gradient/angle. Shown below are the angles for lines in a test image, showing two groups with positive (+30°) and negative (-35°) angle.
  ![alt text][image3]
  - Line Segment Average: Since many line segments are detected per lane line, these segments can be averaged for form a better estimate of the lane line (assuming that a straight lane line remains straight in image space). Averaging was performed by calculating the Line Angle, and Line Intercept (pixel value for y = 0). The 'average' for each lane was then calculated by weighted average, using the length of the line segment as weighting. The image below shows the isolation of the left and right line segments.
- [alt text][image2]
+ ![alt text][image2]
  - Display Lines on Image: The 'Average' for the left and right lane lines were displayed on the original frame image, with the left indicated in green and the right in red. These lines were subsequently cropped for the ROI. 
-  [alt text][image1]
+  ![alt text][image1]
 
 Some examples are shown below.
-[alt text][image7]
-[alt text][image8]
+![alt text][image7]
+![alt text][image8]
 
 The pipeline was modified to allow changing image resolution by a specifying relative region of interest. ROI vertices are expressed as values in [0,1], which are subsequently scaled to fit the image resolution. This allowed operation with the challenge video.
 
