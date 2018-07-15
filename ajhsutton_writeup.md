@@ -1,8 +1,8 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
+## Andrew Sutton, 15 July 2018
 
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
+### The writeup describes the implementation of an Edge detection and line segmentation pipeline for extraction of lane lines. It was performed as part of the Udacity Self-Driving Car Nanodegree program in 2018.
 
 ---
 
@@ -53,7 +53,9 @@ The follow steps were implemented for the pipeline. The pipeline was tuned to de
   ![alt text][image1]
 
 Some examples are shown below.
+
 ![alt text][image7]
+
 ![alt text][image8]
 
 The pipeline was modified to allow changing image resolution by a specifying relative region of interest. ROI vertices are expressed as values in [0,1], which are subsequently scaled to fit the image resolution. This allowed operation with the challenge video.
